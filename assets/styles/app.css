@@ -1,3 +1,44 @@
 body {
-    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffeabf;
+    font-family: 'Overpass', sans-serif;
+}
+header {
+    position: relative;
+    background-color: #b7b5a3;
+    padding: 0 10rem;
+}
+main {
+    flex-grow: 1;
+    padding: 0 10rem;
+}
+footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: #e7d69c;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0.5rem 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1rem 0;
+}
+li > a {
+    text-decoration: none;
+    color: black;
+}
+li > a:hover {
+    text-decoration: underline;
 }
