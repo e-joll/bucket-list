@@ -30,6 +30,19 @@ h1 {
     align-items: flex-end;
     padding: 0.5rem 0;
 }
+.team {
+    display: flex;
+    margin: 1rem 0;
+    gap: 10px;
+}
+.team-author {
+    width: 250px;
+    padding: 10px;
+    border: solid #b7b5a3;
+}
+.team-author p {
+    margin: 0.5rem 0;
+}
 ul {
     display: flex;
     gap: 0 2rem;

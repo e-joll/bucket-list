@@ -1,10 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-     {{ parent() }} | About us
+    {{ parent() }} | About us
 {% endblock %}
 
 {% block body %}
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur assumenda at autem blanditiis corporis, cupiditate deleniti distinctio dolorum eius et id incidunt ipsa ipsam iusto laudantium magnam natus officiis placeat, possimus quasi qui quia quibusdam quo quos recusandae reiciendis reprehenderit saepe similique voluptate? Consequatur dolor eaque eum minima nobis nulla quam voluptates. Aspernatur cum dolorem error illum ipsum itaque minima modi molestias mollitia natus, non nulla perferendis provident recusandae, suscipit, tempora tempore tenetur ut vero voluptate! Eos ex facere nostrum placeat quidem saepe soluta ullam. Ab alias aliquam autem culpa cupiditate deleniti dolore earum error ex excepturi facere fuga iure laboriosam minus modi natus, neque optio quam qui quis quisquam quos ratione repellendus, repudiandae sunt voluptatibus voluptatum? A accusantium beatae blanditiis consequatur corporis, culpa cum debitis delectus dignissimos distinctio dolore doloribus dolorum excepturi illo magnam maiores modi nam necessitatibus neque, nulla numquam officia officiis pariatur quaerat quam quasi qui reiciendis repellat rerum tenetur ullam, veniam vitae voluptate? Accusantium aliquid amet animi blanditiis commodi dolores ducimus eum fuga id impedit in iure magnam minima, nihil odit officiis omnis pariatur perferendis placeat possimus quis, quisquam reiciendis sequi similique soluta temporibus velit? Accusamus amet beatae similique velit? Distinctio eos laborum totam voluptatem?</p>
+    <div class="team">
+        {% for author in authors %}
+            <div class="team-author">
+                <img src="{{ author.picture }}" alt="Photo de {{ author.firstname }} {{ author.lastname }}" width="250">
+                <h3>{{ author.firstname }} {{ author.lastname }}</h3>
+                <p>{{ author.dateOfBirth | date('d/m/y') }}</p>
+                <p>Creator of {{ author.creatorOf }}</p>
+                <p>{{ author.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
 
