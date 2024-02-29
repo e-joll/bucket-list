@@ -7,7 +7,6 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 header {
-    position: relative;
     background-color: #b7b5a3;
     padding: 0 10rem;
 }
@@ -32,6 +31,7 @@ h1 {
 }
 .team {
     display: flex;
+    flex-wrap: wrap;
     margin: 1rem 0;
     gap: 10px;
 }
@@ -43,7 +43,7 @@ h1 {
 .team-author p {
     margin: 0.5rem 0;
 }
-ul {
+header ul {
     display: flex;
     gap: 0 2rem;
     list-style: none;
