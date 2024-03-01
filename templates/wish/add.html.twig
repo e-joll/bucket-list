@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Add yours!
+{% endblock %}
+
+{% block body %}
+    {{ form_start(formWish) }}
+    {{ form_row(formWish) }}
+    <button type="submit">Let's go!</button>
+    {{ form_end(formWish) }}
+{% endblock %}

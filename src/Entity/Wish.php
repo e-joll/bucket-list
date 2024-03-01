@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\WishRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: WishRepository::class)]
 class Wish
@@ -14,17 +15,19 @@ class Wish
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\NotBlank(message: 'Cette valeur ne peut pas être vide.')]
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
+    #[Assert\NotBlank(message: 'Cette valeur ne peut pas être vide.')]
     #[ORM\Column(length: 50)]
     private ?string $author = null;
 
     #[ORM\Column]
-    private ?bool $isPublished = null;
+    private ?bool $isPublished = true;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;

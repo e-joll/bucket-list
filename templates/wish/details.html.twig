@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
     <h3>{{ wish.title }}</h3>
     <p>Created by {{ wish.author }} on {{ wish.createdAt | date('d/m/y') }}</p>
     <p>{{ wish.description }}</p>
