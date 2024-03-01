@@ -12,7 +12,7 @@ header {
 }
 main {
     flex-grow: 1;
-    padding: 0 10rem;
+    padding: 1rem 10rem;
 }
 footer {
     width: 100%;
