@@ -16,6 +16,7 @@ class Wish
     private ?int $id = null;
 
     #[Assert\NotBlank(message: 'Cette valeur ne peut pas être vide.')]
+    #[Assert\Length(max: 255, maxMessage: 'Le titre ne doit pas dépasser {{ limit }} caractères.')]
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
@@ -23,6 +24,7 @@ class Wish
     private ?string $description = null;
 
     #[Assert\NotBlank(message: 'Cette valeur ne peut pas être vide.')]
+    #[Assert\Length(max: 50, maxMessage: 'Le nom de l\'auteur ne doit pas dépasser {{ limit }} caractères.')]
     #[ORM\Column(length: 50)]
     private ?string $author = null;
 
