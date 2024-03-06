@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h2>Ceci est la page d'accueil</h2>
+    {% if app.user %}
+        <h2>Hello {{ app.user.username }} !</h2>
+    {% else %}
+        <h2>Hello Stranger !</h2>
+    {% endif %}
 {% endblock %}
