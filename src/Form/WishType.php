@@ -30,9 +30,9 @@ class WishType extends AbstractType
                 'label' => 'Please describe it!',
                 'required' => false
             ])
-            ->add('author', TextType::class, [
-                'label' => 'Your username'
-            ])
+//            ->add('author', TextType::class, [
+//                'label' => 'Your username'
+//            ])
 //            ->add('createdAt', DateTimeType::class, [
 //                'html5' => true,
 //                'widget' => 'single_text'
